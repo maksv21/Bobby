@@ -586,6 +586,7 @@ function getFonts() {
     if (typeof chrome === 'object' && chrome.hasOwnProperty('fontSettings')) {
       chrome.fontSettings.getFontList(fonts => resolve(fonts));
     } else {
+      console.info('demo mode on');
       resolve([
         {displayName: "Arial", fontId: "Arial"},
         {displayName: "Arial Black", fontId: "Arial Black"},
