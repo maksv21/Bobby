@@ -1,0 +1,52 @@
+<meta charset="utf-8">
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="scripts/fontdetect.js"></script>
+    <script src="scripts/main.js"></script>
+    <title>Fonts viewer</title>
+</head>
+
+<body>
+	<span id="forTestingFonts">
+		<!--Нужно для тестирования шрифтов, body не подходит из-за стиля display:flex -->
+	</span>
+
+	<span id="groups">
+		<span id="groupsTitle">Groups</span>
+
+		<p class="groupsItem" style="background: #E6E6E6;">Favorite fonts</p>
+		<p class="groupsItem">Installed fonts</p>
+	</span>
+
+	<header>
+    	<!--groups button-->
+    	<i id="moreElementsBtn" class="button material-icons">menu</i>
+
+
+    	<!--title-->
+    	<span id="title" class="button">Latin fonts</span>
+
+    	<!--buttons-->
+    	<span class="headerRightElements">
+			<span class="headerElement">
+				<input id="headerSampleInput" type="text" placeholder="Enter your own text" maxlength="30">
+			</span>
+			<span class="headerElement button" id="increaseFontSizeBtn">A+</span>
+		
+			<span class="headerElement button" id="decreaseFontSizeBtn">A-</span>
+			
+			<i id="feedbackBtn" class="headerElement button material-icons">feedback</i>
+			<i id="helpBtn" class="headerElement button material-icons">help</i>
+		</span>
+	</header>
+
+<main>
+    <!-- Fonts previews -->
+</main>
+</body>
+
+
+</html>

@@ -1,0 +1,288 @@
+/*Основа страницы*/
+input { outline:none; }
+
+body {
+    margin: 0;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+main {
+	cursor: default;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.25s;
+    padding-left: 75px;
+    animation: showMainAnimation .25s forwards;
+    animation-delay: .5s;
+    opacity: 0;
+}
+
+@keyframes showMainAnimation {
+    from {
+        transform: translate(0, 50px);
+    }
+
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes hideMainAnimation {
+    to {
+        transform: translate(0, 50px);
+    }
+
+    from {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+
+.button {
+	cursor: pointer;
+}
+
+
+/*Header*/
+header {
+    flex-shrink: 0;
+    height: 64px;
+    background: #000000;
+    transition: all 0.5s;
+	color: white;
+	font-size:24px;
+	display: flex;
+    transform: translate(0,-100px);
+    animation: showHeaderAnimation .5s forwards
+}
+
+@keyframes showHeaderAnimation {
+    from {
+        transform: translate(0,-100px);
+    }
+    to {
+        transform: translate(0);
+    }
+}
+
+@keyframes hideHeaderAnimation {
+    to {
+        transform: translate(0,-100px);
+    }
+    from {
+        transform: translate(0);
+    }
+}
+
+#moreElementsBtn {
+	margin: auto 0 auto 20px;
+}
+
+
+#title {
+	margin: auto auto auto 31px;
+	transition: all 0.25s;
+}
+
+.headerRightElements {
+    float: right;
+	display: flex;
+	height: 60px
+}
+
+.headerElement {
+    -webkit-user-select: none;
+    margin: auto 22px auto auto;
+
+}
+
+/*Sample input*/
+#headerSampleInput {
+    font-size:16px;
+    padding:10px 10px 10px 5px;
+    width:250px;
+    border:none;
+    background-color: black;
+    color: white;
+	transition: all .25s;
+    box-shadow: 0 1px 0 0 #e8e8e8;
+}
+
+#headerSampleInput::selection {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+#headerSampleInput:focus {
+    box-shadow: 0 2px 0 0 #ffffff;
+}
+
+#headerSampleInput::placeholder {
+    transition: all .25s;
+}
+
+#headerSampleInput:focus::placeholder {
+    opacity: 0.9;
+}
+
+
+#groupsTitle{
+	padding: 0 16px;
+	font-size: 20px;
+}
+
+#groups {
+	z-index: 2;
+	position: fixed;
+    transform: translate(-300px, 0);
+
+    background: #fafafa;
+    height: 100%;
+    width: 300px;
+    color: #424242;
+    font-size: 16px;
+	letter-spacing: .04em;
+    line-height: 48px;
+}
+
+@keyframes groupsShow {
+    100% {
+        transform: translate(0);
+    }
+
+	0%{
+        transform: translate(-300px, 0);
+    }
+}
+
+@keyframes groupsHide {
+    0% {
+        transform: translate(0);
+    }
+
+    100%{
+        transform: translate(-300px, 0);
+    }
+}
+
+.groupsItem {
+	padding: 0 16px;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.groupsItem:hover {
+	background: #eeeeee;
+}
+
+
+/*Скролл*/
+#scroll {
+    position: fixed;
+    right: -12px;
+    background-color: #e7e7e7;
+    width: 12px;
+    height: 100%;
+    transition: all 0.25s;
+    margin-top: 64px;
+
+}
+
+#scrollThumb {
+    width: 12px;
+    height: 100px;
+    background-color: black;
+    position: fixed;
+    right: -12px;
+    transition: all 0.25s;/*нужно для анимации появления, затем убирается*/
+}
+
+#scrollFontName {
+    height: 30px;
+    width: 70px;
+    background: black;
+    position: fixed;
+    border-radius:10px;
+    right: 16px;
+    transition: opacity 0.25s;
+    margin-top: 30px;
+    opacity: 0;
+    color: white;
+    text-align: center;
+
+}
+
+
+/*Превью*/
+.fontString {
+    transform-origin: 0;
+    transition: .25s;
+    font-size: 75px;
+    margin-top: 40px;
+    margin-bottom: 42px;
+}
+
+.fontName {
+    margin: 30px 0 -30px 0;
+    color: #585858;
+	font-size: 14px;
+}
+
+/*Если анимация main прошла до загрузки шрифтов(может случится если тормозит компьютер)*/
+.fontPreview {
+	animation: showFontPreview .25s forwards;
+}
+
+@keyframes showFontPreview {
+    0% {
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.fontPreviewBtn {
+	padding-right: 8px;
+	float: right;
+	color: #0000000d;
+	transition: color 0.5s;
+}
+
+.fontPreviewBtn:hover {
+	color: #000000;
+}
+
+/*Help*/
+@keyframes showHelp {
+    from {
+        margin-top: 70px;
+        opacity: 0;
+    }
+
+    to {
+        margin-top: 0px;
+        opacity: .975;
+    }
+}
+
+@keyframes hideHelp {
+    to {
+        margin-top: 70px;
+        opacity: 0;
+    }
+
+    from {
+        margin-top: 0px;
+        opacity: .975;
+    }
+}
+
