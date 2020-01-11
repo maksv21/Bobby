@@ -12,5 +12,5 @@ Demo: https://maksv21.github.io/Bobby/
 
 <h4>Other</h4>
 <p>Icons taken from https://material.io/resources/icons/</p>
-<p>A library was used to recognize fonts, but I can not find a link to the author</p>
+<p>Author of the font detection library: Lalit Patel</p>
 
