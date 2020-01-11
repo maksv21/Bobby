@@ -51,7 +51,7 @@ function firstStart() {
 
     } else {
       let img = document.createElement('img');
-      img.src = '../icons/200.png';
+      img.src = 'icons/200.png';
       img.style.margin = 'auto';
       img.style.paddingBottom = '15%';
       document.getElementById('help').innerHTML = '';
