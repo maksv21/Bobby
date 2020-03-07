@@ -7,7 +7,3 @@ Demo: https://maksv21.github.io/Bobby/
 
 <h4>Installing</h4>
 <p>Chrome -> three dots on the right -> More tools -> Extensions -> On Developer mode -> Load unpacked</p>
-
-<h4>Other</h4>
-<p>Icons taken from https://material.io/resources/icons/</p>
-<p>Author of the font detection library: Lalit Patel</p>
